@@ -1,0 +1,1 @@
+document.write('You did it and you started JavaScript <a href="https://v2.scrimba.com/javascript-deep-dive-c0a:toc">Deep Dive</a>');

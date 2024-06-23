@@ -41,3 +41,7 @@ const favouritePlaces = {
 }
 
 console.log(favouritePlaces)
+
+r = Math.random()
+
+console.log(r)

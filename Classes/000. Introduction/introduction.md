@@ -107,3 +107,128 @@ Class Student extends Person {
         console.log(`${this.name} is studying`);
     }
 }
+
+const student1 = new Student('BoB', 20, 'A');
+student1.greet(); // Hello my name is bob
+student.study(); // Bob is studyng
+
+
+**Challenge: Your first Class**
+Overview:
+This challenge involves writing your first class to solidify your understanding of ES6 class syntax
+
+**Tips:**
+    - Define a classs for a simple oject such as an animal or a product
+    - Include a constructor with properties at least one method
+    - Create instances of the class and call their methods.
+
+**Example:**
+```
+class Animal {
+    constructor(species, name) {
+        this.species = species;
+        this.name = name;
+    }
+
+    speak() {
+        sonsole.log(`${this.name} makes a sound);
+    }
+}
+
+const animal1 = new Animal('Dog', 'Buddy')
+animal1.speak() // Buddy makes a sound.
+
+**Share a Class Features with Extends**
+**Overview**
+The `extends `keyword allow one class to inherit properties and methods from another class.
+
+**Tips:**
+    - Use `extends ` to create a subclass.
+    - Call the parennt class constructor with `super ` in the subclass constructor.
+    - Overide or extend methods as needed.
+  
+**Example:**
+```
+class Employee {
+    constructor(name, position) {
+        this.name = name;
+        this.position = position;
+    }
+
+    work() {
+        console.log(`${this.name} is working`);
+    }
+}
+
+class Manager extends Employee {
+    constructor(name, position, department) {
+        super(name, position);
+        this.department;
+    }
+
+    mange() {
+        console.log(`${this.name} is manging ${this.department}`);
+    }
+}
+
+const manager1 = new Manager('Carol', 'Manager', 'Sales');
+manager.work(); // Carol is working
+manager1.manage() // Carol is managing Sales
+
+
+**How to get , Set and Simplify Classes**
+
+**Overview:**
+This section covers how to define getter and setter methods in classes and other ways to simplify class structures.
+**Tips:**
+    - Use `get` and `set`keywords to define getters and setters.
+    - Getters and setters allow you to control access to object properties.
+
+**Example:**
+```
+class Rectangle {
+    constructor(width, height) {
+        this.width = width
+        this height = weight;
+    }
+
+    get area() {
+        return this.width * this.weigth;
+    }
+
+    set simensions(dimensions) {
+        this width = dimensions.width;
+        this.height = dimensions.height;
+    }
+}
+
+const rect = new Rectangle(5, 10);
+console.log(rect.area); // 50
+rect.dimensions = { width: 7, height: 14 }
+console.log(rect.area) //98
+
+**Fix Contents Problems with .bind()**
+
+**Overview:**
+
+The `.bind() ` method is used to ensure that `this`retains the correct context, especially in callback funcitons and event handlers.
+
+**Tips:**
+    - Use `bind(this)` to create a new function with `this` bound to the current context.
+    - Understand when and why `this` loses context, such as in event listeners or callbacks.
+
+**Example:**
+```
+class Button {
+    constructor(label) {
+        this.label = label;
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        console.log(`${this.label} button clicked`);
+    }
+}
+
+const button = new Button('Submit');
+document.querySelector('button?.addEventListene('click', button.handleClick))

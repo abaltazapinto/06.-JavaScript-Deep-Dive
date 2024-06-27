@@ -62,8 +62,9 @@ class Product {
     }
   }
   
-  const saleProduct1 = new SaleProduct("Coffee Maker", 99, false, 20);
+  const saleProduct1 = new SaleProduct("Coffee Maker", 99, true, 20);
   console.log(saleProduct1.getSalePrice());
 
   // React 
-// https://reactjs.org
+// https://reactjs.org            // React official website 
+// https://reactjs.org/docs/getting-started.html

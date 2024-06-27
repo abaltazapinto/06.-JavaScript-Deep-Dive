@@ -8,4 +8,8 @@ const student1 = {
   }
 
   student1.addSubject('Math')
+
+
+  student1.addSubject('history')
+
   console.log(student1.subjects) // ['Math']

@@ -1,6 +1,6 @@
 // // callbacks -> promises
 
-const { error } = require("console");
+
 
 // // States of a promise:
 // // pending 
@@ -24,15 +24,29 @@ const { error } = require("console");
 //     .then(value => console.log(value))
 //     .catch(error => console.error(error)) //methods
 //     .finally(() => console.log('Promise settled')); //methods
-const promise = new Promise((resolve, reject) => {
-navigator.geolocation.getCurrentPosition(position => {
-    resolve(position);
-    console.log('It worked!');
-}, error => {
-    reject(error);  }
-);
-});
+// const promise = new Promise((resolve, reject) => {
+// navigator.geolocation.getCurrentPosition(position => {
+//     resolve(position);
+//     console.log('It worked!');
+// }, error => {
+//     reject(error);  }
+// );
+// });
 
-promise.then(position => console.log(position))
-    .catch(error => console.error(error))
-    .finally(() => console.log('Done!'));
+// promise.then(position => console.log(position))
+//     .catch(error => console.error(error))
+//     .finally(() => console.log('Done!'));
+
+    //another way 
+        const promise = new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve(position), reject(error)); 
+     });
+     
+     promise
+       .then(position => console.log(position))
+       .catch(error => console.error(error))
+       .finally(() => console.log('done'));
+
+    const pause = (delay) => new Promise(resolve => setTimeout(resolve, delay));
+
+    console.log(pause(2000) `worked!` );

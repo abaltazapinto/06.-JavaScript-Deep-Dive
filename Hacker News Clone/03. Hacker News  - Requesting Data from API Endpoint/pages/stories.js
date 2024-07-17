@@ -4,7 +4,7 @@ export default async function Stories(path) {
   const stories = await getStories(path);
   const hasStories = stories.length > 0;
                     
-  view.innerHTML = `<div>
+  view.innerHTML = `<div>ihhpujkl
   ${ hasStories? stories.map(story => JSON.stringify(story)).join('<br/>') : 'No stories found'  }
   </div>`;  
 }
